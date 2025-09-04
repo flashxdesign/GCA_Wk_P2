@@ -1,2 +1,2 @@
-# GCA_Wk_P2
+# GCA_P2_landingPage
 charity: water Landing Page
