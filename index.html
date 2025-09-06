@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>charity: water — When You Speak, Change Flows</title>
+
+  <!-- Optional brand font (safe to remove). Uses a clean, bold sans for headings. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Brand-style palette (tweak as needed) */
+      --brand-yellow:#FFD200;
+      --brand-dark:#0c0c0c;
+      --brand-text:#1f2937;   /* slate-800 */
+      --brand-muted:#6b7280;  /* gray-500 */
+      --white:#ffffff;
+
+      /* Layout */
+      --container: 1120px;
+      --radius: 14px;
+      --shadow: 0 8px 30px rgba(0,0,0,.15);
+    }
+
+    /* Base */
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Proxima Nova, system-ui, -apple-system, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--brand-text);
+      line-height:1.55;
+      background:#fff;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Utilities */
+    .container{
+      width: min(100% - 2rem, var(--container));
+      margin-inline:auto;
+    }
+    /*HERO BUTTON SHAPE*/
+    .btn{
+      display:inline-block;
+      padding:.45rem 1rem;
+      border-radius:10px;
+      font-weight:700;
+      letter-spacing:.2px;
+      transition:.2s ease-in-out;
+      border:2px solid transparent;
+    }
+    .btn-primary{
+      background:var(--brand-yellow);
+      color:#111;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus{
+      filter:brightness(0.95);
+      transform:translateY(-1px);
+    }
+    .btn-outline{
+      background:transparent;
+      border-color:var(--brand-yellow);
+      color:#111;
+    }
+    .btn-outline:hover,
+    .btn-outline:focus{
+      background:var(--brand-yellow);
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:#fff;
+      border-bottom:1px solid #eee;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: .9rem 0;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.65rem;
+      font-weight:800;
+      letter-spacing:.5px;
+      color:#222;
+    }
+    /* STYLE FOR THE LOGO IMAGE IN THE HEADER */
+    .brand-logo {
+      height: 50px;       /* Controls how tall the logo appears */
+      width: auto;        /* Keeps the aspect ratio correct */
+      display: block;     /* Ensures it behaves like an image block */
+}
+ 
+    .nav-actions{
+      display:flex;align-items:center;gap:.5rem;
+    }
+
+    /* Hero */
+    .hero{
+      position: relative;
+      min-height:72svh;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      overflow:hidden;
+      background:#111;
+    }
+    /* Replace this URL with your hero image */
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background-image: url("img/water-clean-hands.jpg"); /* HERO IMG */
+      background-size:cover;background-position:center; /*POSITION OF HERO IMG WITHIN THE BANNER*/
+      filter:brightness(.55);
+      transform:scale(1.025);
+    }
+    .hero-content{
+      position:relative;
+      width:min(100% - 2rem, 800px);
+      margin-inline:auto;
+    }
+    .eyebrow{
+      display:inline-block;
+      background:rgba(255,210,0,.95);
+      color:#111;
+      font-weight:800;
+      padding:.2rem .55rem;
+      border-radius:6px;
+      margin-bottom:1rem;
+      font-size:.85rem;
+      letter-spacing:.2px;
+    }
+    /*WHEN YOU SPEAK CHANGE FLOWS*/
+    .hero h1{
+      font-size:clamp(2rem, 6vw, 3.25rem);
+      line-height:1.1;
+      margin:0 0 .75rem;
+      font-weight:700; 
+      letter-spacing:.01em; 
+    }
+    .hero p{
+      max-width:55ch;
+      font-size:clamp(1rem, 2.6vw, 1.125rem);
+      line-height: 1.25;
+      color:#f1f5f9;
+      margin:0 0 1.25rem;
+      font-weight:330;
+    }
+    .cta-row{
+      display:flex;gap:.75rem;flex-wrap:wrap;
+    }
+
+    /* Support/credibility section */
+    .section{
+      padding:4rem 0;
+    }
+    .section.light{background:#fafafa}
+    .section h2{
+      font-size:clamp(1.5rem, 4vw, 2rem);
+      margin:0 0 .75rem;
+      letter-spacing:-.01em;
+    }
+    .lead{
+      color:var(--brand-muted);
+      max-width:70ch;
+      margin:0 0 2rem;
+    }
+
+    .stats{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:1rem;margin-top:1.5rem;
+    }
+    .stat{
+      background:#fff;border:1px solid #eee;border-radius:var(--radius);
+      padding:1.25rem;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .stat .num{
+      font-size:clamp(1.5rem, 4vw, 2rem);
+      font-weight:800;
+      color:#111;
+    }
+    .stat .label{color:var(--brand-muted)}
+
+    /* How it works */
+    .steps{
+      display:grid;gap:1rem;grid-template-columns:repeat(3,1fr);
+    }
+    .step{
+      background:#fff;border:1px solid #eee;border-radius:var(--radius);
+      padding:1.25rem;box-shadow:var(--shadow);
+    }
+    .step b{display:block;margin-bottom:.35rem}
+    .step p{margin:.25rem 0;color:#4b5563}
+
+    /* Footer */
+    footer{
+      background:#0b0b0b;color:#cbd5e1;padding:3rem 0;
+    }
+    footer .brand{color:#e5e7eb}
+    .fineprint{color:#94a3b8;font-size:.9rem;margin-top:1rem}
+
+    /* Responsive tweaks */
+    @media (max-width: 900px){
+      .stats{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 620px){
+      .stats{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <!-- HEADER BRAND WITH LOGO -->
+<a class="brand" href="#">
+  <!-- Replace the old yellow square with your logo image -->
+  <img src="img/logo-can-horizontal.png" alt="charity: water logo" class="brand-logo">
+
+</a>
+
+<!-- HEADER BUTTON -->
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="#donate">Give Water</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" role="banner" aria-label="Clean water mission hero">
+    <div class="hero-content">
+     
+      <h1>When You Speak, <br>Change Flows</h1>
+      <p><b>Your donation becomes clean water on the ground and we show you the lives it transforms.</b></p>
+      <br>
+      <div class="cta-row">
+        <a id="donate" class="btn btn-primary" href="#donate-form">
+          Donate Now to Fund Clean Water
+        </a>
+      
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Impact / Social proof -->
+  <section id="impact" class="section">
+    <div class="container">
+      <h2>Real, Measurable Impact</h2>
+      <p class="lead">Your gift powers sustainable water projects and transparent reporting so you can meet the communities you help.</p>
+
+      <div class="stats" role="list">
+        <div class="stat" role="listitem">
+          <div class="num">+10,000</div>
+          <div class="label">Projects Funded</div>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="num">1M+</div>
+          <div class="label">People with Clean Water</div>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="num">100%</div>
+          <div class="label">Of Public Donations to Field Work</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section light">
+    <div class="container">
+      <h2>How Your Donation Flows</h2>
+      <p class="lead">Simple steps, lasting change. We partner locally, build sustainably, and share updates you can trust.</p>
+
+      <div class="steps">
+        <div class="step">
+          <b>1) You Give</b>
+          <p>Your donation funds proven clean-water solutions in communities that need them most.</p>
+        </div>
+        <div class="step">
+          <b>2) We Build</b>
+          <p>Local partners implement wells, piped systems, and filters—built for long-term reliability.</p>
+        </div>
+        <div class="step">
+          <b>3) You See</b>
+          <p>We report back with project updates, photos, and coordinates so you can see your impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <!-- Gallery / placeholders you can replace later -->
+  <section class="section" aria-label="Project images">
+    <div class="container">
+      <h2>Projects in Focus</h2>
+      <p class="lead">Swap these placeholders with your own images to match your brand story.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1600&auto=format&fit=crop" alt="Clean water tap project (placeholder)">
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1600&auto=format&fit=crop" alt="Community collecting clean water (placeholder)" style="object-fit:cover;aspect-ratio:4/3">
+        <img src="https://images.unsplash.com/photo-1562158077-9c88f41d2772?q=80&w=1600&auto=format&fit=crop" alt="Field maintenance and training (placeholder)" style="object-fit:cover;aspect-ratio:4/3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Simple pseudo-donate anchor (replace with your real form or link) -->
+  <section id="donate-form" class="section light" aria-label="Donate">
+    <div class="container">
+      <h2>Ready to help clean water flow?</h2>
+      <p class="lead">Choose any amount—every drop matters. Replace this section with your donation form or platform link.</p>
+      <a class="btn btn-primary" href="#top">Donate Now to Fund Clean Water</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true">✚</span>
+        <span>charity: water</span>
+      </div>
+      <p class="fineprint">© <span id="y">2025</span> charity: water — All rights reserved. • Replace placeholder imagery with your own brand assets for launch.</p>
+    </div>
+  </footer>
+
+  <!-- Tiny, optional year helper (pure HTML would also work by editing the text) -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
