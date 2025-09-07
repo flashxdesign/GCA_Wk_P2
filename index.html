@@ -94,9 +94,9 @@
       <div class="section-eyebrow"></div>
       <p class="lead">From drilling wells to building taps, every project is shaped by local hands and hard work.</p>
   <div class="faces-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
-        <img src="img/AIMockUp1.png" alt="Clean water tap project (placeholder)">
-        <img src="img/AIMockUp2.png" alt="Community collecting clean water (placeholder)">
-        <img src="img/AIMockUp3.png" alt="Field maintenance and training (placeholder)" >
+  <img class="faces-img" src="img/AIMockUp1.png" alt="Clean water tap project (placeholder)">
+  <img class="faces-img" src="img/AIMockUp2.png" alt="Community collecting clean water (placeholder)">
+  <img class="faces-img" src="img/AIMockUp3.png" alt="Field maintenance and training (placeholder)" >
       </div>
     </div>
     <br>
@@ -175,6 +175,7 @@
           <p class="why-card__text">
             With access to clean water, kids around the world could get 443 million school days back every year.
           </p>
+          <br>
         </article>
 
         <!-- Card 3: Growth -->
@@ -188,7 +189,7 @@
 
           <h3 class="why-card__title">Growth</h3>
           <p class="why-card__text">
-            Every $1 invested in clean water can yield $4.30 in economic returns.
+            Every $1 invested in clean water can yield $4.30 in economic returns, lifting families out of poverty.
           </p>
         </article>
 
@@ -202,41 +203,95 @@
 
 
 
-  <!-- =========================
-       How it works
-       ========================= -->
-  <section id="how" class="section light">
-    <div class="container">
-      <h2>How Your Donation Flows</h2>
-      <p class="lead">Simple steps, lasting change. We partner locally, build sustainably, and share updates you can trust.</p>
 
-      <div class="steps">
-        <div class="step">
-          <b>1) You Give</b>
-          <p>Your donation funds proven clean-water solutions in communities that need them most.</p>
-        </div>
-        <div class="step">
-          <b>2) We Build</b>
-          <p>Local partners implement wells, piped systems, and filters—built for long-term reliability.</p>
-        </div>
-        <div class="step">
-          <b>3) You See</b>
-          <p>We report back with project updates, photos, and coordinates so you can see your impact.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- =========================
-       Donate (placeholder)
-       ========================= -->
-  <section id="donate-form" class="section light" aria-label="Donate">
-    <div class="container">
-      <h2>Ready to help clean water flow?</h2>
-      <p class="lead">Choose any amount—every drop matters. Replace this section with your donation form or platform link.</p>
-      <a class="btn btn-primary" href="#top">Donate Now to Fund Clean Water</a>
+<!-- =========================================================
+     DONATION FORM (Card Style, Brand Yellow)
+   ========================================================= -->
+<section id="donate-form" class="donate section" aria-label="Donate">
+  <div class="container">
+
+    <!-- Card wrapper -->
+    <div class="donate-card">
+      <h2 class="donate__title">Help clean water flow.</h2>
+      <p class="donate__sub">100% of your donation funds clean water projects.</p>
+
+      <!-- NOTE: action="" connects later to your processor -->
+      <form class="donate-form" action="#" method="post">
+
+        <!-- ===== Amount ===== -->
+        <fieldset class="donate-group">
+          <legend class="donate-label">Choose your amount</legend>
+          <div class="donate-amounts">
+            <label class="amount-pill">
+              <input type="radio" name="amount" value="25" required>
+              <span>$25</span>
+            </label>
+            <label class="amount-pill">
+              <input type="radio" name="amount" value="50">
+              <span>$50</span>
+            </label>
+            <label class="amount-pill">
+              <input type="radio" name="amount" value="100">
+              <span>$100</span>
+            </label>
+            <label class="amount-pill">
+              <input type="radio" name="amount" value="250">
+              <span>$250</span>
+            </label>
+            <label class="amount-custom">
+              <span class="sr-only">Custom amount</span>
+              <span class="currency">$</span>
+              <input type="number" step="1" min="1" name="amount_custom" placeholder="Custom" aria-label="Custom amount">
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- ===== Frequency ===== -->
+        <fieldset class="donate-group">
+          <legend class="donate-label">Frequency</legend>
+          <div class="donate-frequency">
+            <label class="freq-pill">
+              <input type="radio" name="frequency" value="one-time" checked>
+              <span>One-time</span>
+            </label>
+            <label class="freq-pill">
+              <input type="radio" name="frequency" value="monthly">
+              <span>Monthly</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- ===== Donor Info ===== -->
+        <div class="donor-grid">
+          <label class="donor-field">
+            <span class="donor-label">Full Name</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="donor-field">
+            <span class="donor-label">Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+        </div>
+
+        <!-- ===== Cover fees ===== -->
+        <label class="cover-fees">
+          <input type="checkbox" name="cover_fees" value="yes">
+          <span>I'd like to help cover processing costs.</span>
+        </label>
+
+        <!-- ===== Submit ===== -->
+        <button type="submit" class="btn btn-dark donate-submit">
+          Donate Now to Fund Clean Water
+        </button>
+
+        <p class="donate-trust">Secure form • You’ll receive a receipt by email</p>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- =========================
        Footer
