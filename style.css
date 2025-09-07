@@ -1,8 +1,7 @@
 
-}
 /* Rounded corners for Faces of Change images */
 .faces-img {
-  border-radius: var(--radius);
+  border-radius: 14px !important;
   overflow: hidden;
   display: block;
 }
