@@ -5,294 +5,200 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>charity: water — When You Speak, Change Flows</title>
 
-  <!-- Optional brand font (safe to remove). -->
+  <!-- Brand font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- 🔗 Link to your external stylesheet (put this file next to index.html) -->
+  <!-- Site styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- =========================
-       Header (logo + donate btn)
+       Header (sticky)
        ========================= -->
   <header>
     <div class="container nav">
-      <!-- Brand / Logo -->
       <a class="brand" href="#">
-        <!-- 📷 Replace the src below with your logo file in /img -->
         <img src="img/logo-can-horizontal.png" alt="charity: water logo" class="brand-logo">
       </a>
-
-      <!-- Header CTA -->
       <div class="nav-actions">
-        <a class="btn btn-primary" href="#donate">Give Water</a>
+        <a class="btn btn-primary" href="#donate-form">Give Water</a>
       </div>
     </div>
   </header>
 
   <!-- =========================
-       Hero (big headline section)
+       Hero (banner)
+       - Now left-aligned and kept out of the subject area
        ========================= -->
   <section class="hero" role="banner" aria-label="Clean water mission hero">
-    <div class="hero-content">
-      <h1>When You Speak, <br>Change Flows</h1>
+    <div class="container">
+      <div class="hero-content fade-in-up">
+        <h1>When You Speak, <br>Change Flows</h1>
+        <p><b>Your donation becomes clean water on the ground and we show you the lives it transforms.</b></p>
 
-      <!-- Subheading -->
-      <p><b>Your donation becomes clean water on the ground and we show you the lives it transforms.</b></p>
-
-      <!-- Primary CTA -->
-      <div class="cta-row">
-        <a id="donate" class="btn btn-primary" href="#donate-form">
-          Donate Now to Fund Clean Water
-        </a>
+        <div class="cta-row">
+          <a id="donate" class="btn btn-primary" href="#donate-form">
+            Donate Now to Fund Clean Water
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <br>
   <br>
-
-
   <!-- =========================
        Impact / Social proof
        ========================= -->
-  <section id="impact" class="section">
+  <section id="impact" class="section" aria-label="Impact metrics">
     <div class="container">
       <h2>Real, Measurable Impact</h2>
-  <div class="section-eyebrow"></div>
+      <span class="section-eyebrow" aria-hidden="true"></span>
       <p class="lead">Your gift powers sustainable water projects and transparent reporting so you can meet the communities you help.</p>
-      <br>
-  <div class="stats" role="list">
-      
-        <div class="stat" role="listitem">
+
+      <div class="stats" role="list">
+        <div class="stat fade-in-up" role="listitem">
           <div class="num">186,000</div>
           <div class="label">Projects Funded</div>
         </div>
-        
-        <div class="stat" role="listitem">
+        <div class="stat fade-in-up" role="listitem">
           <div class="num">29</div>
           <div class="label">Countries</div>
         </div>
-
-        <div class="stat" role="listitem">
+        <div class="stat fade-in-up" role="listitem">
           <div class="num">20,297,336</div>
           <div class="label">People with Clean Water</div>
         </div>
-    
       </div>
     </div>
-    <br>
   </section>
 
   <!-- =========================
-       Projects in Focus (moved here)
+       Faces of Change (gallery)
        ========================= -->
-  <section class="section" aria-label="Project images">
+  <section id="faces" class="section" aria-label="Impact photo gallery">
     <div class="container">
       <h2>Faces of Change</h2>
-      <div class="section-eyebrow"></div>
+      <span class="section-eyebrow" aria-hidden="true"></span>
       <p class="lead">From drilling wells to building taps, every project is shaped by local hands and hard work.</p>
-  <div class="faces-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
-  <img class="faces-img" src="img/AIMockUp1.png" alt="Clean water tap project (placeholder)">
-  <img class="faces-img" src="img/AIMockUp2.png" alt="Community collecting clean water (placeholder)">
-  <img class="faces-img" src="img/AIMockUp3.png" alt="Field maintenance and training (placeholder)" >
+<br>
+      <div class="faces-grid">
+        <img class="faces-img fade-in-up" src="img/AIMockUp1.png" alt="Clean water tap project">
+        <img class="faces-img fade-in-up" src="img/AIMockUp2.png" alt="Community collecting clean water">
+        <img class="faces-img fade-in-up" src="img/AIMockUp3.png" alt="Field maintenance and training">
       </div>
     </div>
-    <br>
   </section>
 
+  <br>
+  <br>
   <!-- ===============================================
-     ABOUT / FOUNDER QUOTE (single-column banner)
-     - Image spans full width
-     - Quote text sits below, centered
-   =============================================== -->
-  <section id="about" class="about-quote">
-    <!-- Text content below the image -->
-    <div class="container about-quote__content">
-      <p class="about-quote__eyebrow"></p>
-      <h2 class="about-quote__title">
-        “The craziest thing we can do is nothing.”
-      </h2>
-      <p class="about-quote__attribution">
-        — Scott Harrison, Founder &amp; CEO of charity: water
-      </p>
-    </div>
-    <br>
-  </section>
-
-
-  <!-- ===============================================
-       WHY WATER? (the new section you asked to add)
-       - Background image with dark overlay
-       - Centered eyebrow + headline
-       - 3 info cards with yellow badges + icons
+       Founder Quote (placed AFTER Faces of Change)
        =============================================== -->
-  <section id="why-water" class="why-water">
-  
-    <br>
-    <div class="why-water__inner container">
-      <!-- Eyebrow label -->
-      <p class="why-water__eyebrow">WHY WATER?</p>
+  <section id="about" class="about-quote fade-in-up" aria-label="Founder quote">
+    <div class="container about-quote__content">
+      <p class="about-quote__eyebrow" aria-hidden="true"></p>
+      <h2 class="about-quote__title">“The craziest thing we can do is nothing.”</h2>
+      <p class="about-quote__attribution">— Scott Harrison, Founder &amp; CEO of charity: water</p>
+    </div>
+  </section>
 
-      <!-- Main title (forced line break on desktop only) -->
+  <br>
+  <br>
+  <!-- ===============================================
+       WHY WATER? (dark bg + 3 cards)
+       =============================================== -->
+  <section id="why-water" class="why-water" aria-label="Why water matters">
+    <div class="why-water__inner container">
+      <p class="why-water__eyebrow">WHY WATER?</p>
       <h2 class="why-water__title">
         Access to it is a human right.<br class="show-desktop">
         You can help deliver it.
       </h2>
-<br>
 
-  </section>
-
-  <!-- ===============================================
-     ABOUT / FOUNDER QUOTE (single-column banner)
-     - Image spans full width
-     - Quote text sits below, centered
-   =============================================== -->
-  <section id="about" class="about-quote">
-    <!-- Text content below the image -->
-    <div class="container about-quote__content">
-      <p class="about-quote__eyebrow"></p>
-      <h2 class="about-quote__title">
-        “The craziest thing we can do is nothing.”
-      </h2>
-      <p class="about-quote__attribution">
-        — Scott Harrison, Founder &amp; CEO of charity: water
-      </p>
-    </div>
-    <br>
-  </section>
-
-  <!-- =========================
-       Projects in Focus (moved here)
-       ========================= -->
-  <section class="section" aria-label="Project images">
-    <div class="container">
-      <h2>Faces of Change</h2>
-      <div class="section-eyebrow"></div>
-      <p class="lead">From drilling wells to building taps, every project is shaped by local hands and hard work.</p>
-      <div class="faces-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
-        <img class="faces-img" src="img/AIMockUp1.png" alt="Clean water tap project (placeholder)">
-        <img class="faces-img" src="img/AIMockUp2.png" alt="Community collecting clean water (placeholder)">
-        <img class="faces-img" src="img/AIMockUp3.png" alt="Field maintenance and training (placeholder)" >
-      </div>
-    </div>
-    <br>
-  </section>
-        <!-- Card 3: Growth -->
-        <article class="why-card">
+      <div class="why-water__cards" role="list">
+        <!-- Card 1 -->
+        <article class="why-card fade-in-up" role="listitem">
           <div class="why-card__badge" aria-hidden="true">
-            <!-- Growth / bar chart icon -->
-            <svg viewBox="0 0 24 24" class="why-card__icon" role="img" aria-label="">
-              <path d="M3 20h18v2H1V2h2v18zm4-6h3v6H7v-6zm5-4h3v10h-3V10zm5-6h3v16h-3V4z"></path>
-            </svg>
+            <svg viewBox="0 0 24 24" class="why-card__icon"><path d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z"/></svg>
           </div>
-
-          <h3 class="why-card__title">Growth</h3>
-          <p class="why-card__text">
-            Every $1 invested in clean water can yield $4.30 in economic returns, lifting families out of poverty.
-          </p>
+          <h3 class="why-card__title">Health</h3>
+          <p class="why-card__text">Access to clean water and basic sanitation can save around 16,000 lives every week.</p>
         </article>
 
-      </div><!-- /.why-water__cards -->
-    </div><!-- /.why-water__inner -->
+        <!-- Card 2 -->
+        <article class="why-card fade-in-up" role="listitem">
+          <div class="why-card__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="why-card__icon"><path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3zm0 8L5.5 8.73V13c0 2.9 4.33 5 6.5 5s6.5-2.1 6.5-5V8.73L12 11z"/></svg>
+          </div>
+          <h3 class="why-card__title">Education</h3>
+          <p class="why-card__text">With access to clean water, kids around the world could get 443 million school days back every year.</p>
+        </article>
 
-    <br>  
-    <br>
-    <br>
+        <!-- Card 3 -->
+        <article class="why-card fade-in-up" role="listitem">
+          <div class="why-card__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="why-card__icon"><path d="M3 20h18v2H1V2h2v18zm4-6h3v6H7v-6zm5-4h3v10h-3V10zm5-6h3v16h-3V4z"/></svg>
+          </div>
+          <h3 class="why-card__title">Growth</h3>
+          <p class="why-card__text">Every $1 invested in clean water can yield $4.30 in economic returns, lifting families out of poverty.</p>
+        </article>
+      </div>
+    </div>
   </section>
 
+  <!-- =========================================================
+       Donation Form (card style, brand yellow)
+       ========================================================= -->
+  <section id="donate-form" class="donate section" aria-label="Donate">
+    <div class="container">
+      <div class="donate-card fade-in-up">
+        <h2 class="donate__title">Help clean water flow.</h2>
+        <p class="donate__sub">100% of your donation funds clean water projects.</p>
 
+        <form class="donate-form" action="#" method="post">
+          <!-- Amount -->
+          <fieldset class="donate-group">
+            <legend class="donate-label">Choose your amount</legend>
+            <div class="donate-amounts">
+              <label class="amount-pill"><input type="radio" name="amount" value="25" required><span>$25</span></label>
+              <label class="amount-pill"><input type="radio" name="amount" value="50"><span>$50</span></label>
+              <label class="amount-pill"><input type="radio" name="amount" value="100"><span>$100</span></label>
+              <label class="amount-pill"><input type="radio" name="amount" value="250"><span>$250</span></label>
+              <label class="amount-custom">
+                <span class="sr-only">Custom amount</span>
+                <span class="currency">$</span>
+                <input type="number" step="1" min="1" name="amount_custom" placeholder="Custom" aria-label="Custom amount">
+              </label>
+            </div>
+          </fieldset>
 
+          <!-- Frequency -->
+          <fieldset class="donate-group">
+            <legend class="donate-label">Frequency</legend>
+            <div class="donate-frequency">
+              <label class="freq-pill"><input type="radio" name="frequency" value="one-time" checked><span>One-time</span></label>
+              <label class="freq-pill"><input type="radio" name="frequency" value="monthly"><span>Monthly</span></label>
+            </div>
+          </fieldset>
 
-
-<!-- =========================================================
-     DONATION FORM (Card Style, Brand Yellow)
-   ========================================================= -->
-<section id="donate-form" class="donate section" aria-label="Donate">
-  <div class="container">
-
-    <!-- Card wrapper -->
-    <div class="donate-card">
-      <h2 class="donate__title">Help clean water flow.</h2>
-      <p class="donate__sub">100% of your donation funds clean water projects.</p>
-
-      <!-- NOTE: action="" connects later to your processor -->
-      <form class="donate-form" action="#" method="post">
-
-        <!-- ===== Amount ===== -->
-        <fieldset class="donate-group">
-          <legend class="donate-label">Choose your amount</legend>
-          <div class="donate-amounts">
-            <label class="amount-pill">
-              <input type="radio" name="amount" value="25" required>
-              <span>$25</span>
-            </label>
-            <label class="amount-pill">
-              <input type="radio" name="amount" value="50">
-              <span>$50</span>
-            </label>
-            <label class="amount-pill">
-              <input type="radio" name="amount" value="100">
-              <span>$100</span>
-            </label>
-            <label class="amount-pill">
-              <input type="radio" name="amount" value="250">
-              <span>$250</span>
-            </label>
-            <label class="amount-custom">
-              <span class="sr-only">Custom amount</span>
-              <span class="currency">$</span>
-              <input type="number" step="1" min="1" name="amount_custom" placeholder="Custom" aria-label="Custom amount">
-            </label>
+          <!-- Donor info -->
+          <div class="donor-grid">
+            <label class="donor-field"><span class="donor-label">Full Name</span><input type="text" name="name" autocomplete="name" required></label>
+            <label class="donor-field"><span class="donor-label">Email</span><input type="email" name="email" autocomplete="email" required></label>
           </div>
-        </fieldset>
 
-        <!-- ===== Frequency ===== -->
-        <fieldset class="donate-group">
-          <legend class="donate-label">Frequency</legend>
-          <div class="donate-frequency">
-            <label class="freq-pill">
-              <input type="radio" name="frequency" value="one-time" checked>
-              <span>One-time</span>
-            </label>
-            <label class="freq-pill">
-              <input type="radio" name="frequency" value="monthly">
-              <span>Monthly</span>
-            </label>
-          </div>
-        </fieldset>
+          <!-- Cover fees -->
+          <label class="cover-fees"><input type="checkbox" name="cover_fees" value="yes"><span>I'd like to help cover processing costs.</span></label>
 
-        <!-- ===== Donor Info ===== -->
-        <div class="donor-grid">
-          <label class="donor-field">
-            <span class="donor-label">Full Name</span>
-            <input type="text" name="name" autocomplete="name" required>
-          </label>
-          <label class="donor-field">
-            <span class="donor-label">Email</span>
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-        </div>
-
-        <!-- ===== Cover fees ===== -->
-        <label class="cover-fees">
-          <input type="checkbox" name="cover_fees" value="yes">
-          <span>I'd like to help cover processing costs.</span>
-        </label>
-
-        <!-- ===== Submit ===== -->
-        <button type="submit" class="btn btn-dark donate-submit">
-          Donate Now to Fund Clean Water
-        </button>
-
-        <p class="donate-trust">Secure form • You’ll receive a receipt by email</p>
-      </form>
+          <!-- Submit -->
+          <button type="submit" class="btn btn-dark donate-submit">Donate Now to Fund Clean Water</button>
+          <p class="donate-trust">Secure form • You’ll receive a receipt by email</p>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- =========================
        Footer
@@ -300,15 +206,13 @@
   <footer>
     <div class="container">
       <div class="brand">
-  <img src="img/jerry_can_white.png" alt="charity: water logo" class="brand-logo" style="height: 40px; width: auto; display: block;" />
-     
-      <p class="fineprint">© <span id="y">2025</span> charity: water — All rights reserved. </p>
+        <img src="img/jerry_can_white.png" alt="charity: water logo" class="brand-logo" style="height:40px;width:auto;">
+      </div>
+      <p class="fineprint">© <span id="y">2025</span> charity: water — All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Tiny helper to keep the year current -->
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <!-- Tiny helper: keep the year current -->
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
